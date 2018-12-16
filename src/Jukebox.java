@@ -23,13 +23,15 @@ public class Jukebox implements Runnable {
 
 	public static void main(String[] args) {
 		SwingUtilities.invokeLater(new Jukebox());
+		
+		
 	}
 
            public void run() {
 
 		// 3. Find an mp3 on your computer or on the Internet.
 		// 4. Create a Song
-
+        	   song s = new song();
 		// 5. Play the Song
 
 		/*
