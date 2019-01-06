@@ -1,5 +1,5 @@
 /*
- *    Copyright (c) The League of Amazing Programmers 2013-2018
+ *    Copyright (c) The League of Amazing Programmers 2013-2018size(width, height)
  *    Level 1
  */
 
@@ -28,8 +28,8 @@ public class Jukebox implements Runnable, ActionListener {
                                      
 	public static void main(String[] args) {
 		SwingUtilities.invokeLater(new Jukebox());
-		
-		run();
+		Jukebox x = new Jukebox();
+		x.run();
 	}
 
 	String one = "AEIOU.mp3";
@@ -63,28 +63,30 @@ public class Jukebox implements Runnable, ActionListener {
 		 * cover is clicked, stop the currently playing song, and play the one
 		 * that was selected.
 		 */
+        	  b.setIcon(loadImage("magic-box.jpg")); bb.setIcon(loadImage("magic-box.jpg")); bbb.setIcon(loadImage("magic-box.jpg"));
+        	 
           }
 	/* Use this method to add album covers to your Panel. */
-	private JLabel loadImage(String fileName) {
+	private Icon loadImage(String fileName) {
 		URL imageURL = getClass().getResource(fileName);
 		Icon icon = new ImageIcon(imageURL);
-		return new JLabel(icon);
+		return icon;
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		if(e.getSource().equals(b)) {
 			Song s = new Song("AEIOU.mp3");
-
+			s.play();
 		}
 		if(e.getSource().equals(bb)) {
 			Song s = new Song("shiny-objects.wav");
-
+			s.play();
 		}
 			
 		if(e.getSource().equals(bbb)) {
 			Song s = new Song("TETRIS THEME SONG (Trap Remix).mp3");
-
+			s.play();
 		}
 			
 			
