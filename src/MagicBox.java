@@ -33,8 +33,8 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 	BufferedImage backgroundImage;
 	
 	public static void main(String[] args) throws Exception {
-		SwingUtilities.invokeLater(new MagicBox());
 		new MagicBox().run();
+		
 		
 		
 		
