@@ -31,10 +31,11 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 	 */
 
 	BufferedImage backgroundImage;
-
+	
 	public static void main(String[] args) throws Exception {
 		SwingUtilities.invokeLater(new MagicBox());
-	
+		new MagicBox().run();
+		
 		
 		
 	}
@@ -76,7 +77,7 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+		 backgroundImage.getRGB(e.getX(), e.getY());
 	}
 
 	@Override
